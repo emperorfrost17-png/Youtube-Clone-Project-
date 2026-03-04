@@ -1,0 +1,68 @@
+/* Default/compact sidebar for laptop widths below 1200px */
+@media (max-width: 1199px) {
+  .sidebar{
+    position: fixed;
+    top: 55px;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    width: 72px;
+    z-index: 200;
+    padding-top: 5px;
+  }
+  .sidebar-link{
+    height: 74px;
+    display: flex;
+    justify-content: center;/*This is for horizontal center*/
+    align-items: center;/*This is for vertical center*/
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .sidebar-link:hover{
+    background-color: rgb(238, 238, 238);
+  }
+  .sidebar-link img{
+    height: 25px;
+    margin-bottom: 5px;
+  }
+  .sidebar-link div{
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, Arial;
+    font-size: 8px;
+  }
+}
+
+/* Expanded sidebar for wide screens (desktop layout from the lesson) */
+@media (min-width: 1200px) {
+  .sidebar{
+    position: fixed;
+    top: 55px;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    width: 200px; /* Wider rail so icon + label fit on one line */
+    z-index: 200;
+    padding-top: 12px;
+  }
+  .sidebar-link{
+    height: 44px;
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Switch from stacked icon/text to horizontal layout */
+    cursor: pointer;
+    padding-left: 24px; /* Align items with left gutter like YouTube desktop */
+  }
+  .sidebar-link:hover{
+    background-color: rgb(238, 238, 238);
+  }
+  .sidebar-link img{
+    height: 24px;
+    margin-bottom: 0;
+    margin-right: 24px; /* Space between icon and text label */
+  }
+  .sidebar-link div{
+    font-family: Roboto, Arial;
+    font-size: 14px;
+  }
+}
